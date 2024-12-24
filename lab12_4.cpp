@@ -2,6 +2,9 @@
 
 using namespace std;
 
+template <class type>
+void mySwap(type &, type &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +33,9 @@ int main(){
 	return 0;
 }
 
+template <class currentType>
+void mySwap(currentType &x, currentType &y) {
+	currentType pre = y;
+	y = x;
+	x = pre;
+}
